@@ -1,13 +1,13 @@
 function updateTime() {
-  //Los Angeles
-  let losAngelesElement = document.querySelector("#los-angeles");
-  if (losAngelesElement) {
-    let losAngelesDateElement = losAngelesElement.querySelector(".date");
-    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
-    let losAngelesTime = moment().tz("America/Los_Angeles");
+  //Cancun
+  let cancunElement = document.querySelector("#cancun");
+  if (cancunElement) {
+    let cancunDateElement = cancunElement.querySelector(".date");
+    let cancunTimeElement = cancunElement.querySelector(".time");
+    let cancunTime = moment().tz("America/Cancun");
 
-    losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
-    losAngelesTimeElement.innerHTML = losAngelesTime.format(
+    cancunDateElement.innerHTML = cancunTime.format("MMMM Do YYYY");
+    cancunTimeElement.innerHTML = cancunTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
@@ -20,6 +20,18 @@ function updateTime() {
 
     parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
     parisTimeElement.innerHTML = parisTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+  //Tokyo
+  let tokyoElement = document.querySelector("#tokyo");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector(".date");
+    let tokyoTimeElement = tokyoElement.querySelector(".time");
+    let tokyoTime = moment().tz("Asia/Tokyo");
+
+    tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
+    tokyoTimeElement.innerHTML = tokyoTime.format(
       "h:mm:ss [<small>]A[</small>]"
     );
   }
